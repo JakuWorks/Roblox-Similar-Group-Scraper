@@ -44,7 +44,7 @@ DEFAULT_PARALLEL_MAX_WORKERS_GET_RELATED_GROUPS_IDS: int = 1
 DEFAULT_PARALLEL_MAX_WORKERS_GET_GROUPS_NAMES: int = 1
 
 DEFAULT_OUTPUT_ADD_GROUP_NAMES: bool = False  # This will extend the scraping time twice
-DEFAULT_OUTPUT_HEADING: str = "Occurrences - Group Id"
+DEFAULT_OUTPUT_HEADING: str = "Occurrences | Group ID"
 
 
 def get_groups_ids(our_input_gui: InputGui) -> Set[int]:

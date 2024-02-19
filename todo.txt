@@ -1,0 +1,3 @@
+1. fix rate limits - rip
+2. add more status messages - create a class and a class method for the map function!!! handle status messages there using class properties
+3. The scan button works while hint text is active (maybe try adding a class property for the scrolledtextwithhnt to help communication)

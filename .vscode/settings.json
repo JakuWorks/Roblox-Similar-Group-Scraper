@@ -1,0 +1,22 @@
+{
+  "python.analysis.typeCheckingMode": "basic",
+  "cSpell.words": [
+    "Candara",
+    "Consolas",
+    "Gover",
+    "INPUTBOX",
+    "ipadx",
+    "ipady",
+    "Matan",
+    "padx",
+    "pady",
+    "platformability",
+    "Pylance",
+    "pythonist",
+    "Roblox",
+    "Tahoma",
+    "tkfont",
+    "yscrollcommand"
+  ],
+  "python.analysis.autoImportCompletions": true
+}

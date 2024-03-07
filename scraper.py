@@ -39,7 +39,6 @@ def urlopen_with_retries(max_tries: int = DEFAULT_URL_GET_ERROR_MAXIMUM_TRIES, r
         tries_left: int = max_tries - retry_number
 
         try:
-            raise RuntimeError("DEBUG")
             return urllib.request.urlopen(*args, **kwargs)
         except:
             # Usually the exception is either a rate limit or a bad gateway (502 status code)

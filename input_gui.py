@@ -238,7 +238,11 @@ class InputGui:
         pass
 
     def tab_raw_return(self) -> None:
-        self.input_callback.set(value=self.tab_raw_text_box.get_current_text())
+        if self.tab_raw_text_box.hint_is_displayed:
+            current_text: str = ''
+        else:
+            current_text = self.tab_raw_text_box.get_current_text()
+        self.input_callback.set(value=current_text)
 
     def tab_fancy_return(self) -> None:
         # Convert data from fancy to raw using the function

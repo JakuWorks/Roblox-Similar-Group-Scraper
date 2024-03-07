@@ -1,3 +1,7 @@
+TODO:
+- The http error retries handling is displaying the wrong retry number. Starts at  0 or 1 I think and ends at 2 while the tries count is actually 3. Maybe rename it back to retries in the messages and keep tries in code
+
+DONE!!!
 1. fix rate limits - rip
 2. add more status messages - create a class and a class method for the map function!!! handle status messages there using class properties
 3. The scan button works while hint text is active (maybe try adding a class property for the scrolledtextwithhnt to help communication)

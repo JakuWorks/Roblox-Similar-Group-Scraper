@@ -1,5 +1,6 @@
 """
 Roblox ERP & Fetish Groups Finder
+Special gift for Ruben Sim
 """
 
 # Example group: 3070057
@@ -38,9 +39,9 @@ import scraper
 """
 
 
-# Do not increase - Roblox will rate limit you
-DEFAULT_PARALLEL_MAX_WORKERS_GET_GROUPS_MEMBERS_IDS: int = 2
-DEFAULT_PARALLEL_MAX_WORKERS_GET_RELATED_GROUPS_IDS: int = 1
+# Do not increase too much - Roblox WILL rate limit you
+DEFAULT_PARALLEL_MAX_WORKERS_GET_GROUPS_MEMBERS_IDS: int = 4 # This many groups can be processed at once
+DEFAULT_PARALLEL_MAX_WORKERS_GET_RELATED_GROUPS_IDS: int = 4
 DEFAULT_PARALLEL_MAX_WORKERS_GET_GROUPS_NAMES: int = 1
 
 DEFAULT_OUTPUT_ADD_GROUP_NAMES: bool = False  # This will extend the scraping time twice
@@ -64,7 +65,9 @@ def get_groups_members_ids(groups_ids: Set[int], parallel_max_workers: int = DEF
 
 def get_related_groups_to_users(users_ids: Set[int], parallel_max_workers: int = DEFAULT_PARALLEL_MAX_WORKERS_GET_RELATED_GROUPS_IDS) -> Iterable[Tuple[int, int]]:
     with ThreadPoolExecutor(max_workers=parallel_max_workers) as executor:
-        users_groups_map: Iterator = executor.map(scraper.get_user_groups_ids, users_ids)
+        users_ids_to_get_groups_count: int = len(users_ids)
+        getting_users_ids_operation: scraper.GettingUsersGroupsIdsOperation = scraper.GettingUsersGroupsIdsOperation(total_users_count=users_ids_to_get_groups_count)
+        users_groups_map: Iterator = executor.map(getting_users_ids_operation.get_user_groups_ids, users_ids)
         users_groups: Set[FrozenSet[int]] = {*users_groups_map}
 
     LOG("Counting Occurrences!", 1)
@@ -122,8 +125,14 @@ def main() -> None:
     our_input_gui: InputGui = our_input_gui_builder.build()
 
     groups_ids: Set[int] = get_groups_ids(our_input_gui=our_input_gui)
+    LOG(f"Received {len(groups_ids)} unique groups ids", 3)
+
     users_ids: Set[int] = get_groups_members_ids(groups_ids=groups_ids)
+    LOG(f"Received {len(users_ids)} unique users ids", 3)
+
     related_groups_scored: Iterable[Tuple[int, int]] = get_related_groups_to_users(users_ids=users_ids)
+    LOG(f"Received {len(list(related_groups_scored))} unique groups ids of players", 3)
+
     save_groups_occurrences_data_to_file(occurrences=related_groups_scored)
 
     LOG("Main Script End", 0)

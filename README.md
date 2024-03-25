@@ -9,4 +9,4 @@ It works like this:
 Most rule-breaking players create so-called alt-accounts. These are used mostly for the breaking the rules, while their 'main' account is untouched.
 Because of this a number of the detected 'child' groups will be actual ERP groups. Though the accuracy may vary.
 
-Video showcase:
+Video showcase: https://youtu.be/JGIpr2RZH28

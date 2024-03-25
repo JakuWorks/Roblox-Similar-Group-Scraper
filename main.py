@@ -12,6 +12,7 @@ from datetime import datetime
 from input_gui import InputGui, InputGuiBuilder
 from typing import Set, FrozenSet, Iterator, Iterable, Tuple
 from logger import LOG
+from pathlib import Path
 import scraper
 
 
@@ -40,7 +41,7 @@ import scraper
 
 
 # Do not increase too much - Roblox WILL rate limit you
-DEFAULT_PARALLEL_MAX_WORKERS_GET_GROUPS_MEMBERS_IDS: int = 4 # This many groups can be processed at once
+DEFAULT_PARALLEL_MAX_WORKERS_GET_GROUPS_MEMBERS_IDS: int = 4  # This many groups can be processed at once
 DEFAULT_PARALLEL_MAX_WORKERS_GET_RELATED_GROUPS_IDS: int = 4
 DEFAULT_PARALLEL_MAX_WORKERS_GET_GROUPS_NAMES: int = 1
 
@@ -109,9 +110,14 @@ def save_groups_occurrences_data_to_file(occurrences: Iterable[Tuple[int, int]],
 
     output_text: str = "\n".join([output_text_heading, output_text_groups])
 
-    path = rf".\results\{filename}.txt"
+    cwd: Path = Path.cwd()
 
-    with open(file=path, mode="wt") as file:
+    results_folder_path: Path = cwd.joinpath("results")
+    results_folder_path.mkdir(exist_ok=True)
+
+    results_file_path: Path = results_folder_path.joinpath(f"{filename}.txt")
+
+    with open(file=results_file_path, mode="wt") as file:
         file.write(output_text)
 
 

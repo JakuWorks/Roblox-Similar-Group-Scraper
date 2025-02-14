@@ -14,7 +14,7 @@ from logger import LOG
 from pathlib import Path
 import scraper
 
-
+# Rules for future edition:
 # DO NOT USE ANY MODULES THAT REQUIRE MANUAL INSTALLATION
 # USE __ONLY__ VANILLA MODULES THAT ARE INCLUDED WITH PYTHON
 # CODE MUST SUPPORT PYTHON 3.10 AND UP

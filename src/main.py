@@ -1,6 +1,5 @@
 """
-Roblox ERP & Fetish Groups Finder
-Special gift for Ruben Sim
+Roblox-Similar-Group-Scraper
 """
 
 # Example group: 3070057

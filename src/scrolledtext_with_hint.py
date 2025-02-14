@@ -54,5 +54,5 @@ class ScrolledTextWithHint(scrolledtext.ScrolledText):
             self.configure(foreground=self.hint_foreground_color)
 
     def get_current_text(self) -> str:
-        # Just some handy method to avoid using the more complicated get method.
+        # Just some handy abstract method to avoid using the more complicated get method.
         return self.get(index1="1.0", index2="end-1c")

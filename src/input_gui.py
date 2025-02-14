@@ -46,7 +46,7 @@ tab_fancy_information_gui_data: InformationGuiAppearance = InformationGuiAppeara
 @dataclass
 class InputGuiBuilder:
 
-    window_title: str = "Roblox ERP Groups Finder"
+    window_title: str = "Roblox-Similar-Group-Scraper"
     window_size: str = "1000x800"  # Width x Height
 
     tab_raw_information_gui_data: InformationGuiAppearance = field(default_factory=lambda: tab_raw_information_gui_data)

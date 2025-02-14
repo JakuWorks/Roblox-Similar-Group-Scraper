@@ -2,9 +2,6 @@
 Roblox-Similar-Group-Scraper
 """
 
-# Example group: 3070057
-# Example link:  https://www.roblox.com/groups/3070057/Doges-fangroup#!/about
-
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime

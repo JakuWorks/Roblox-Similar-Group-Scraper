@@ -1,5 +1,5 @@
 ### Main
-Roblox-Similar-Group-Scraper is a tool designed to help users efficiently find similar groups
+Roblox-Similar-Group-Scraper is a tool designed to help users efficiently find Roblox groups related to each other
 
 It works this way:
 1. Input one or more 'root' groups.

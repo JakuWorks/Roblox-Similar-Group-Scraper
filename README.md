@@ -9,6 +9,6 @@ It works this way:
 5. Saves the result to a file
 
 ### Usage:
-1. Clone/download the repository source code (click the green "Code" button and click "Download Zip"
+1. Clone/download the repository source code (click the green "Code" button and click "Download ZIP"
 2. Run the "main.py" file and use the GUI
 Note: There aren't any dependencies to install. The program should run with out-of-the-box "vanilla" Python

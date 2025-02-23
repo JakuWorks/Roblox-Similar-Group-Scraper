@@ -54,14 +54,14 @@ class InputGuiBuilder:
     tab_raw_button_import_from_fancy_name: str = "Import Content From Fancy Tab"
     tab_raw_button_scan_name: str = "Scan Using Raw Input"
     tab_raw_button_help_name: str = "Help"
-    tab_raw_text_box_hint_text: str = """Input ID/URL for each Roblox Group you want to include in the search.
+    tab_raw_text_box_hint_text: str = """Input IDs/URLs of each Roblox Group you want to include in the search.
     You must separate them by either:
     1. New Line
     2. " " Space
     3. "," Comma
     4. ";" Semicolon
 
-    Example input (yes it's all valid ways):
+    Example input (yes it's all valid):
 3982592, 9760527 5211428 15772045; 10249200
 3341679, https://www.roblox.com/groups/3059674/Badimo#!/about; https://www.roblox.com/groups/5126818/Interbyte-Studio#!/about
 3870049

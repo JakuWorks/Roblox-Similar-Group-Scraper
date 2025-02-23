@@ -12,4 +12,5 @@ It works this way:
 1. Clone/download the repository source code (click the green "Code" button and click "Download ZIP"
 2. Enter the "src" folder and run the "main.py" file.
 3. Use the GUI
+
 Note: There aren't any dependencies to install. The program should run with out-of-the-box "vanilla" Python

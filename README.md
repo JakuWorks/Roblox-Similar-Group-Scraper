@@ -8,4 +8,7 @@ It works this way:
 4. Ranks each 'child' group based on the ammount of players from the 'root' group who occured within them
 5. Saves the result to a file
 
-[Download](https://github.com/JakuWorks/Roblox-ERP-Scraper/releases/tag/v1.0)
+Usage:
+1. Clone/download the repository source code (click the green "Code" button and click "Download Zip"
+2. Run the "main.py" file
+Note: There aren't any dependencies to install. The program should run with out-of-the-box "vanilla" Python

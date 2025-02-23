@@ -61,7 +61,7 @@ class InputGuiBuilder:
     3. "," Comma
     4. ";" Semicolon
 
-    Example:
+    Example input (yes it's all valid ways):
 3982592, 9760527 5211428 15772045; 10249200
 3341679, https://www.roblox.com/groups/3059674/Badimo#!/about; https://www.roblox.com/groups/5126818/Interbyte-Studio#!/about
 3870049
